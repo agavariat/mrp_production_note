@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record  id="mrp_production_view_notes_form" model="ir.ui.view">
+        <field name="name">mrp.production.notes.form</field>
+        <field name="model">mrp.production</field>
+        <!--field name="model">model.manipulate.many2many</field-->
+        <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+        <field name="arch" type="xml">
+               
+            <xpath expr="//group" position="inside">
+				<group string="Diseño">
+                    <!--field name="x_diseño" string="Diseño"/-->
+                    <field name="x_tama_cli"/>
+                    <field name="nuerevi"/>
+                    <field name="tiene_cambio" attrs=
+                              "{'invisible': ['|',('nuerevi','!=','51')]}"/>
+                    <field name="Cual_cambio" attrs=
+                              "{'invisible': ['|',('tiene_cambio','!=','50')]}"/>
+                </group>
+                <group>
+                </group>
+                <group string = " Montaje">
+                </group>
+                <group>
+                </group>
+                <group>
+                    <field name="tamasoporte"/>  
+                    <field name="tintas"/>
+                    <field name="tamaplancha"/>
+                    <field name="cavidadtroquel"/>
+                    <field name="Montaje"/>
+                    <field name="Pelicula_UV"/>
+                    <field name="Clisse"/>
+                    <field name="Cavidades_Clisse" attrs=
+                            "{'invisible': ['|',('Clisse','!=','50')]}"/>
+                    <field name="Clase_de_Clisse" attrs=
+                            "{'invisible': ['|',('Clisse','!=','50')]}"/>
+                </group>
+                <group>
+                    <field name="tintas_1"/>
+                    <field name="codigos_Pantone" widget="many2many_tags" attrs=
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+                    <field name="codigos_Pantone2" widget="many2many_tags" attrs=
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+                    <field name="codigos_Pantone3" widget="many2many_tags" attrs=
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+                    <field name="codigos_Pantone4" widget="many2many_tags" attrs=
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+                    <field name="Barniz"/>
+                    <field name="maquina"/>
+                    <field name="Sangrado"/>
+                    <field name="Giro_1"/>
+                    <field name="troquel"/>
+                    <field name="cavidadtroquel" attrs=
+                            "{'invisible': ['|',('troquel','!=','50')]}"/>
+                </group>
+                <group string = "Corte Papel">
+                </group>
+                <group>
+                </group>
+                <group>
+                    <field name="tipo_papel"/>
+                    <field name="Numero_de_hojas"/>
+                    <field name="Tamaños_para_el_Pedido"/>
+                    <field name="Es_Talonario"/>
+                </group>
+                <group>
+                    <field name="tamamateriprima"/>
+                    <field name="tamasoporte"/>
+                    <field name="Tamaños_Programados"/>
+                    <field name="Copias_y_secuencia_de_color" attrs=
+                            "{'invisible': ['|',('Es_Talonario','!=','50')]}"/>
+                </group>
+                <group string = "Procesos">
+                </group>
+                <group>
+                </group>
+                <group>
+                    <field name="Laminados"/>
+                    <!--field name="tamamateriprima"/-->
+                    <field name="Clase_Barniz_UV"/>
+                    <field name="EstampadoRepuje"/>
+                    <field name="Tapa_talonario"/>
+                </group>
+                <group>
+                    <field name="Barniz_UV"/>
+                    <field name="Troquelado"/>
+                    <field name="Talonario"/>
+                </group>
+                <group>
+                    <field name="Encuadernacion"/>
+                    <field name="Procesos_Varios"/>
+                    <field name="Sanduchar" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                </group>
+                <group>
+                </group>
+                <group>
+                    <field name="Sanduchar_Pasta_Semidura" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/> 
+                    <field name="Sanduchar_Pasta_Dura_con_lomo" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/>
+                    <field name="Sanduchar_Servicio_Pasta_Dura" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/>
+                    <field name="Sanduchar_Magnetica" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/>
+                </group>
+                <group>
+                    <field name="Sanduchar_Pasta_Dura" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/>
+                    <field name="Sanduchar_Servicio_Pasta_Semidura" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/>
+                    <field name="Sanduchar_Servicio_Pasta_Dura_con_lomo" attrs=
+                        "{'invisible': ['|',('Sanduchar','=',False)]}"/>  
+                </group>
+                <group>
+                    <field name="Argollado" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Cosido_Hilo" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Emblocado" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Iman" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Montaje_Guardas" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Resorte_Montaje" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                </group>
+                <group>
+                    <field name="Cinta_Cabezada" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Despunte_Tacos_carton" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Gancho_Caballete" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Hot_Melt" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                    <field name="Perforacion_para_Iman" attrs=
+                        "{'invisible': ['|',('Encuadernacion','=',False)]}"/>
+                </group>
+                <group>
+                    <field name="Argollar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Descolillar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Grapar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Levantar_Servicio" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Pegar_Adhesivo" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Plegar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Otros" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/> 
+                </group>
+                <group>
+                    <field name="Armar_Sobre" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Despuntar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Levantar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="PegadoBolsillo" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Perforar_Taladro" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                    <field name="Revisar" attrs=
+                        "{'invisible': ['|',('Procesos_Varios','=',False)]}"/>
+                </group>
+			</xpath>
+
+
+
+            <!--notebook>
+                <page string="Notes">
+                    <field name="notes" nolabel="1" />
+                </page>
+            </notebook-->
+        </field>
+    </record>
+</odoo>
