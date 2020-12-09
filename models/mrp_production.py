@@ -133,17 +133,17 @@ class MrpProduction(models.Model):
         _name = 'model.manipulate.many2many'
     class SeveralFields(models.Model):
         _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many.2'
+        _name = 'model.manipulate.many2many2'
     class SeveralFields(models.Model):
         _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many.3'
+        _name = 'model.manipulate.many2many3'
     class SeveralFields(models.Model):
         _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many.4'
+        _name = 'model.manipulate.many2many4'
     codigos_Pantone = fields.Many2many('model.manipulate.many2many', string = "Codigos Pantone 1")
-    codigos_Pantone2 = fields.Many2many('model.manipulate.many2many.2', string = "Codigos Pantone 2")
-    codigos_Pantone3 = fields.Many2many('model.manipulate.many2many.3', string = "Codigos Pantone 3")
-    codigos_Pantone4 = fields.Many2many('model.manipulate.many2many.4', string = "Codigos Pantone 4")
+    codigos_Pantone2 = fields.Many2many('model.manipulate.many2many2', string = "Codigos Pantone 2")
+    codigos_Pantone3 = fields.Many2many('model.manipulate.many2many3', string = "Codigos Pantone 3")
+    codigos_Pantone4 = fields.Many2many('model.manipulate.many2many4', string = "Codigos Pantone 4")
     Barniz = fields.Selection(
         [('50', 'Sobreimpresion'),
          ('51', 'Acuoso'),
