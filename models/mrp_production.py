@@ -3,6 +3,24 @@
 
 from odoo import fields, models
 
+class SeveralFields(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.manipulate.many2many'
+class SeveralFields(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.manipulate.many2many2'
+class SeveralFields(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.manipulate.many2many3'
+class SeveralFields(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.manipulate.many2many4'
+class modelo72form(models.Model):
+    _description = 'Modelo para Manipular Many2many72'
+    _name = 'model.many2many72'
+
+    name = fields.Char('72form')
+
 
 class MrpProduction(models.Model):
     _inherit = 'mrp.production'
@@ -127,26 +145,10 @@ class MrpProduction(models.Model):
          ('8', '5x4')
         ], "No Tintas",
     )
-    
-    class modelo72form(models.Model):
-        _description = 'Modelo para Manipular Many2many72'
-        _name = 'model.many2many72'
 
-        name = fields.Char('72form')
     x_merc72_form = fields.Many2many('model.many2many72', string="72. ¿Qué redes sociales utiliza para su negocio?")
 
-    class SeveralFields(models.Model):
-        _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many'
-    class SeveralFields(models.Model):
-        _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many2'
-    class SeveralFields(models.Model):
-        _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many3'
-    class SeveralFields(models.Model):
-        _description = 'Modelo para Manipular Many2many'
-        _name = 'model.manipulate.many2many4'
+
     codigos_Pantone = fields.Many2many('model.manipulate.many2many', string = "Codigos Pantone 1")
     codigos_Pantone2 = fields.Many2many('model.manipulate.many2many2', string = "Codigos Pantone 2")
     codigos_Pantone3 = fields.Many2many('model.manipulate.many2many3', string = "Codigos Pantone 3")
