@@ -20,6 +20,12 @@ class modelo72form(models.Model):
     _name = 'model.many2many72'
 
     name = fields.Char('72form')
+    
+class modelo73form(models.Model):
+    _description = 'Modelo para Manipular Many2many73'
+    _name = 'model.many2many73'
+
+    name = fields.Char('73form')
 
 
 class MrpProduction(models.Model):
@@ -147,7 +153,7 @@ class MrpProduction(models.Model):
     )
 
     x_merc72_form = fields.Many2many('model.many2many72', string="Codigos Pantone 1")
-    x_merc73_form = fields.Many2many('model.many2many72', string="Codigos Pantone 1")
+    x_merc73_form = fields.Many2many('model.many2many73', string="Codigos Pantone 1")
 
 
     codigos_Pantone = fields.Many2many('model.manipulate.many2many', string = "Codigos Pantone 1")
