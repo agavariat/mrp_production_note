@@ -127,6 +127,13 @@ class MrpProduction(models.Model):
          ('8', '5x4')
         ], "No Tintas",
     )
+    
+    class modelo72form(models.Model):
+        _description = 'Modelo para Manipular Many2many72'
+        _name = 'model.many2many72'
+
+        name = fields.Char('72form')
+    x_merc72_inf = fields.Many2many('model.inf.many2many', string = "72. ¿Que medios electrónicos utiliza?")
 
     class SeveralFields(models.Model):
         _description = 'Modelo para Manipular Many2many'
