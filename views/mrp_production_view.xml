@@ -37,16 +37,18 @@
                             "{'invisible': ['|',('Clisse','!=','50')]}"/>
                 </group>
                 <group>
-	            <field name="x_merc72_form" widget="many2many_tags"/>
+	            
                     <field name="tintas_1"/>
-                    <field name="codigos_Pantone" widget="many2many_tags" attrs=
+		    <field name="x_merc72_form" widget="many2many_tags" attrs=
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+                    <!--field name="codigos_Pantone" widget="many2many_tags" attrs=
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
                     <field name="codigos_Pantone2" widget="many2many_tags" attrs=
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
                     <field name="codigos_Pantone3" widget="many2many_tags" attrs=
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
                     <field name="codigos_Pantone4" widget="many2many_tags" attrs=
-                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/-->
                     <field name="Barniz"/>
                     <field name="maquina"/>
                     <field name="Sangrado"/>
