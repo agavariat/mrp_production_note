@@ -146,7 +146,7 @@ class MrpProduction(models.Model):
         ], "No Tintas",
     )
 
-    x_merc72_form = fields.Many2many('model.many2many72', string="72. ¿Qué redes sociales utiliza para su negocio?")
+    x_merc72_form = fields.Many2many('model.many2many72', string="Codigos Pantone 1")
 
 
     codigos_Pantone = fields.Many2many('model.manipulate.many2many', string = "Codigos Pantone 1")
