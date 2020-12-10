@@ -133,7 +133,7 @@ class MrpProduction(models.Model):
         _name = 'model.many2many72'
 
         name = fields.Char('72form')
-    x_merc72_inf = fields.Many2many('model.inf.many2many', string = "72. ¿Que medios electrónicos utiliza?")
+    x_merc72_form = fields.Many2many('model.many2many72', string="72. ¿Qué redes sociales utiliza para su negocio?")
 
     class SeveralFields(models.Model):
         _description = 'Modelo para Manipular Many2many'
