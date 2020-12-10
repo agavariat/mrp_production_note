@@ -2,7 +2,7 @@
 # License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0.html
 
 from odoo import fields, models
-
+#hola
 class SeveralFields(models.Model):
     _description = 'Modelo para Manipular Many2many'
     _name = 'model.manipulate.many2many'
