@@ -153,7 +153,7 @@ class MrpProduction(models.Model):
     )
 
     x_merc72_form = fields.Many2many('model.many2many72', string="Codigos Pantone 1")
-    x_merc73_form = fields.Many2many('model.many2many73', string="Codigos Pantone 1")
+    x_merc73_form = fields.Many2many('model.many2many73', string="Codigos Pantone 2")
 
 
     codigos_Pantone = fields.Many2many('model.manipulate.many2many', string = "Codigos Pantone 1")
