@@ -37,7 +37,7 @@
                             "{'invisible': ['|',('Clisse','!=','50')]}"/>
                 </group>
                 <group>
-	            <field name="x_merc72_inf"/>
+	            <field name="x_merc72_form"/>
                     <field name="tintas_1"/>
                     <field name="codigos_Pantone" widget="many2many_tags" attrs=
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
