@@ -43,6 +43,8 @@
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
 		    <field name="x_merc73_form" widget="many2many_tags" attrs=
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
+            <field name="x_merc74_form" widget="many2many_tags" attrs=
+                            "{'invisible': ['|',('tintas_1','!=','56')]}"/>
                     <!--field name="codigos_Pantone" widget="many2many_tags" attrs=
                             "{'invisible': ['|',('tintas_1','!=','56')]}"/>
                     <field name="codigos_Pantone2" widget="many2many_tags" attrs=
