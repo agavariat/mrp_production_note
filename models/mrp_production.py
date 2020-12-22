@@ -257,7 +257,7 @@ class MrpProduction(models.Model):
         [('50', 'Tiro / Retiro'),
          ('51', 'Tiro & Retiro'),
          ('52', 'Montaje por Puntas'),
-        ], "Montaje",
+        ], "cavidades troquel",
     )
     Giro_1 = fields.Selection(
         [('50', 'Escuadra'),
