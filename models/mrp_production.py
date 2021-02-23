@@ -244,7 +244,7 @@ class MrpProduction(models.Model):
          ('61111', '48'),
          ('71111', '49'),
          ('81111', '50'),
-        ], "Cavidades Montaje",
+        ], "Cavidades",
     )
     Sangrado = fields.Selection(
         [('50', '0.5'),
@@ -257,7 +257,7 @@ class MrpProduction(models.Model):
         [('50', 'Tiro / Retiro'),
          ('51', 'Tiro & Retiro'),
          ('52', 'Montaje por Puntas'),
-        ], "cavidades troquel",
+        ], "Montaje",
     )
     Giro_1 = fields.Selection(
         [('50', 'Escuadra'),
